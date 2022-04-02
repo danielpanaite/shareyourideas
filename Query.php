@@ -88,7 +88,7 @@
 		
 		
 		function getNumeroDomanda (){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '', 'my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1', 'my_shareyourideas');
 			global $GET_NUMERO_DOMANDE;
 			
 			$ris = mysqli_query($conn, $GET_NUMERO_DOMANDE);
@@ -99,7 +99,7 @@
 		}
 		
 		function getDomanda ($settimana){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '', 'my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1', 'my_shareyourideas');
 			global $GET_DOMANDA;
 			$risultato = array();
 			
@@ -119,7 +119,7 @@
 		}
 		
 		function addExp($exp, $nickname){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $ADD_EXP;
 			
 			$stmt = $conn->prepare($ADD_EXP);
@@ -147,7 +147,7 @@
 		}
 		
 		function getGruppi(){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_GRUPPI;
 			
 			$ris = mysqli_query($conn, $GET_GRUPPI);
@@ -158,7 +158,7 @@
 		}
 		
 		function getGruppoUtente($utente){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_GRUPPO_UTENTE;
 			$risultato = array();
 			
@@ -178,7 +178,7 @@
 		}
 		
 		function getMessaggi($utente){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_MESSAGGI;
 			$risultato = array();
 			
@@ -199,7 +199,7 @@
 		
 		function getPost($gruppo, $pagina, $settimana){
 			$pag = ($pagina -1)*5;
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_POST;
 			$risultato = array();
 			
@@ -216,7 +216,7 @@
 		
 		function getNumeroPost($gruppo, $settimana){
 			$size = 0;
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_NUMERO_POST;
 			$risultato = array();
 			
@@ -232,7 +232,7 @@
 		}
 		
 		function getUtente($utente){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_UTENTE;
 			$risultato = array();
 			
@@ -248,7 +248,7 @@
 		}
 		
 		function Login($utente, $password){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $LOGIN;
 			$risultato = array();
 			
@@ -271,7 +271,7 @@
 		}
 		
 		function modificaPassword($password, $utente){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $MODIFICA_PASSWORD;
 			
 			$stmt = $conn->prepare($MODIFICA_PASSWORD);
@@ -281,7 +281,7 @@
 		}
 		
 		function modificaEmail($email, $utente){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $MODIFICA_EMAIL;
 			
 			$stmt = $conn->prepare($MODIFICA_EMAIL);
@@ -291,7 +291,7 @@
 		}
 		
 		function newPost($testo, $gruppo, $nickname){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_NUMERO_TOT_POST;
 			global $INSERT_POST;
 			global $INSERT_POST_GRUPPO;
@@ -336,7 +336,7 @@
 		}
 		
 		function registra($user, $password, $email, $paese, $dataNascita, $codice){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $REGISTRA;
 			
 			$stmt = $conn->prepare($REGISTRA);
@@ -346,7 +346,7 @@
 		}
 		
 		function scegliGruppo($user, $gruppo){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $SCEGLI_GRUPPO;
 			
 			$stmt = $conn->prepare($SCEGLI_GRUPPO);
@@ -356,7 +356,7 @@
 		}
 		
 		function scriviMessaggio($recipiente, $messaggio, $titolo, $mittente){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_NUMERO_TOT_MESSAGGI;
 			global $INSERT_MESSAGGIO;
 			global $INSERT_USER_MESSAGGIO;
@@ -389,7 +389,7 @@
 		}
 		
 		function getEmailFromUser($user){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_EMAIL_FROM_USER;
 			$risultato = array();
 			
@@ -409,7 +409,7 @@
 		}
 		
 		function getUserFromEmail($email){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_USER_FROM_EMAIL;
 			$risultato = array();
 			
@@ -429,7 +429,7 @@
 		}
 		
 		function resetPasswordRecover($password, $user){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $RESET_PASSWORD_RECOVER;
 			
 			$stmt = $conn->prepare($RESET_PASSWORD_RECOVER);
@@ -439,7 +439,7 @@
 		}
 		
 		function getConfirmCode($user){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_CONFIRM_CODE;
 			$risultato = array();
 			
@@ -459,7 +459,7 @@
 		}
 		
 		function checkConfirm($user){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $CHECK_CONFIRM;
 			$risultato = array();
 			
@@ -479,7 +479,7 @@
 		}
 		
 		function confirmEmail($user){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $CONFIRM_EMAIL;
 			
 			$stmt = $conn->prepare($CONFIRM_EMAIL);
@@ -489,7 +489,7 @@
 		}
 		
 		function miPiace($ID){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $MI_PIACE;
 			
 			$stmt = $conn->prepare($MI_PIACE);
@@ -499,7 +499,7 @@
 		}
 		
 		function nonMiPiace($ID){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $NON_MI_PIACE;
 			
 			$stmt = $conn->prepare($NON_MI_PIACE);
@@ -509,7 +509,7 @@
 		}
 		
 		function insertVoto($user, $ID, $value){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $INSERT_VOTO;
 			
 			$stmt = $conn->prepare($INSERT_VOTO);
@@ -519,7 +519,7 @@
 		}
 		
 		function getLike($user, $ID){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_LIKE;
 			$risultato = array();
 			
@@ -539,7 +539,7 @@
 		}
 		
 		function updateMiPiace($user, $ID){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $UPDATE_MI_PIACE;
 			
 			$stmt = $conn->prepare($UPDATE_MI_PIACE);
@@ -549,7 +549,7 @@
 		}
 		
 		function updateNonMiPiace($user, $ID){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $UPDATE_NON_MI_PIACE;
 			
 			$stmt = $conn->prepare($UPDATE_NON_MI_PIACE);
@@ -559,7 +559,7 @@
 		}
 		
 		function removeMiPiace($ID){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $REMOVE_MI_PIACE;
 			
 			$stmt = $conn->prepare($REMOVE_MI_PIACE);
@@ -569,7 +569,7 @@
 		}
 		
 		function removeNonMiPiace($ID){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $REMOVE_NON_MI_PIACE;
 			
 			$stmt = $conn->prepare($REMOVE_NON_MI_PIACE);
@@ -579,7 +579,7 @@
 		}
 		
 		function getAllNicknames(){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_ALL_NICKNAMES;
 			
 			$ris = mysqli_query($conn, $GET_ALL_NICKNAMES);
@@ -590,7 +590,7 @@
 		}
 		
 		function getAllEmails(){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_ALL_EMAILS;
 			
 			$ris = mysqli_query($conn, $GET_ALL_EMAILS);
@@ -601,7 +601,7 @@
 		}
 		
 		function setCooldown($millis, $user){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $UPDATE_COOLDOWN;
 			
 			$stmt = $conn->prepare($UPDATE_COOLDOWN);
@@ -611,7 +611,7 @@
 		}
 		
 		function getCooldown($user){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_COOLDOWN;
 			$risultato = array();
 			
@@ -631,7 +631,7 @@
 		}
 		
 		function getUserPost($post){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_USER_POST;
 			$risultato = array();
 			
@@ -651,7 +651,7 @@
 		}
 		
 		function insertFeedback($user, $testo){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $INSERT_FEEDBACK;
 			
 			$stmt = $conn->prepare($INSERT_FEEDBACK);
@@ -661,7 +661,7 @@
 		}
 		
 		function getUserFeedback($user){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_USER_FEEDBACK;
 			$risultato = array();
 			
@@ -681,7 +681,7 @@
 		}
 		
 		function getFeedbackN(){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_FEEDBACK_N;
 			
 			$ris = mysqli_query($conn, $GET_FEEDBACK_N);
@@ -694,7 +694,7 @@
 		}
 		
 		function getFeedback(){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_FEEDBACK;
 			$risultato = array();
 			
@@ -711,7 +711,7 @@
 		}
 		
 		function updateFeedback($testo, $user){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $UPDATE_FEEDBACK;
 			
 			$stmt = $conn->prepare($UPDATE_FEEDBACK);
@@ -721,7 +721,7 @@
 		}
 		
 		function getWinner($gruppo, $settimana){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_WINNER;
 			$risultato = array();
 			
@@ -737,7 +737,7 @@
 		}
 		
 		function getNotifications($user){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_NOTIFICATIONS;
 			$risultato = array();
 			
@@ -753,7 +753,7 @@
 		}
 		
 		function setMessaggioLetto($user){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $SET_MESSAGGIO_LETTO;
 			
 			$stmt = $conn->prepare($SET_MESSAGGIO_LETTO);
@@ -763,7 +763,7 @@
 		}
         
         function getPassword($user){
-			$conn = mysqli_connect('localhost', 'shareyourideas', '','my_shareyourideas');
+			$conn = mysqli_connect('localhost', 'root', 'g2nz2l1c1','my_shareyourideas');
 			global $GET_PASSWORD;
 			$risultato = array();
 			
